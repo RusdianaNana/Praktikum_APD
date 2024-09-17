@@ -1,0 +1,17 @@
+nama_lengkap = input("masukkan nama lengkap: ")
+nama_panggilan = input("masukkan nama panggilan: ")
+usia = int(input("masukkan usia: "))
+universitas = input("masukkan universitas: ")
+program_studi = input("masukkan program studi: ")
+nim = int(input("masukkan nim: "))
+asal_sekolah = (input("masukkan asal sekolah: "))
+alasan_masuk_informatika = (input ("alasan masuk informatika: "))
+tinggi_badan = float(input("masukkan tinggi badan: "))
+angka_terakhir_nim = int(input("masukkan angka terakhir nim: "))
+print(f"\n Nama lengkap saya {nama_lengkap}, biasa dipanggil dengan {nama_panggilan}.")
+print(f"saya sekarang berusia {usia} tahun dan saya merupakan mahasiswa baru dari universitas {universitas} dari program studi {program_studi}.")
+print(f"dengan nim {nim} saya merupakan mahasiswa dengan asal sekolah {asal_sekolah}.")
+print(f"adapun alasan saya masuk program studi informatika adalah {alasan_masuk_informatika}, saya memiliki tinggi badan {tinggi_badan} cm. ")
+
+modulus = angka_terakhir_nim % 6
+print(f"tiga angka terakhir dari nim saya adalah {angka_terakhir_nim} dan jika dimoduluskan dengan 6,hasilnya adalah {modulus}")
