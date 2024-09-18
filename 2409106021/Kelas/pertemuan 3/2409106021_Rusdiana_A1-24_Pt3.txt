@@ -1,0 +1,9 @@
+angka =  int(input("masukkan angka antara 1 dan 4: "))
+if angka == 1:
+    print ("memasukkan angka 1.")
+elif angka in [2, 3]:
+    print ("masukkan angka 2 atau 3.")    
+elif angka == 4:
+    print ( "masukkan angka 4.")
+else :
+    print ("angka yang dimasukkan tidak valid. Harus antara 1 dan 4")

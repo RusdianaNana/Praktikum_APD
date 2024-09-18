@@ -1,0 +1,8 @@
+cuaca = str(input("masukkan cuaca hari ini: "))
+
+if cuaca =="cerah":
+    print("belajar di sekolah")
+elif cuaca == "hujan":
+    print("belajar di rumah")
+else :
+    print("invalid")

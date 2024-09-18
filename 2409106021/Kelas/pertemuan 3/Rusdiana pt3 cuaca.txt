@@ -1,0 +1,7 @@
+cuaca = input("masukkan kondisi cuaca(cerah/hujan): ")
+if cuaca == "cerah":
+    print ("cuaca cerah, pergi ke sekolah.")
+elif cuaca == "hujan":
+    print ("cuaca hujan, tetap di rumah.")
+else :
+    print("input tidak valid.")
