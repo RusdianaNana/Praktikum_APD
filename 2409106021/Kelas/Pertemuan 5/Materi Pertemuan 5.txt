@@ -1,0 +1,122 @@
+#0 itu indeks kalau start itu 0 stop berenti tpi dimulai dri 1
+
+nama = ["celio","shandy","farel","ghazali","vito","rizal","adri","adi","ifnu"]
+matkul = ["APD","APL","BASDAT","STRUKDAT","WEB","JARKOM"]
+data = nama+matkul
+
+#buat print nama
+# print (nama)
+
+#buat print nama dan tambah nama di akhir (membuat)
+print("sebelum: ")
+print (nama)
+print("")
+print ("sesudah: ")
+nama.append("afrizal")
+print(nama)
+print(data*3)
+
+#buat tambah nama di tengah (membuat)
+print("sebelum: ")
+print (nama)
+print("")
+print ("sesudah: ")
+nama.append(2, "afrizal")
+print(nama)
+
+#cara menimpa atau mengubah sebuah elemen (update)
+nama[4]= "nanaa"
+print(nama)
+
+#menghapus sebuah elemen (fungsi del) 
+del nama[2]
+print(nama)
+##memindahkan sebuah elemen (fungsi pop )
+hapus = nama.pop(2)
+print(nama)
+
+#memanggil indeks dan start
+print(nama[0:2])
+print(nama[1.9])
+
+#memanggil indeks dan start tapi melompati(step)
+print(nama[1:9:2])
+
+
+data = ["farel","celio",[1,2,["halo"]]]
+print(data[2][1][0])
+data = ["farel","celio",[1,2,["halo",23,2,3.True]]]
+print(data[2][2][0])
+#negatif
+data = ["farel","celio",[1,2,["halo",23,2,3.True]]]
+print(data[2][2][::-1])
+
+# #perulangan list
+# matkul = ["APD", "APL", "BASDAT", "STKDAT", "WEB", "JARKOM"]
+# for i in matkul:
+#     print(i)
+#     print(i, end="")
+
+# #perulangan nasted list
+# data = [1, 2, 3, 4, 5, [1,2]]
+# for i in data:
+#     for j in i:
+#         print(j)
+
+#TUPLE
+# nama = ('farel', 'vito', 'shandy', 'celio')
+# print(nama[1:])
+
+# mahasiswa = (69, "Informatika", "2209106044", "Aldy septian ")
+# absen, prodi, nim, nama = mahasiswa
+# print(absen)
+# pritn(prodi)
+# print(nim)
+# print(nama)
+
+
+print(
+"""
+===========================
+|   DATA MAHASISWA        |
+===========================
+|   1. TAMBAH DATA        |
+|   2. TAMPILKAN DATA     | 
+|   3. UBAH DATA          |
+|   4. HAPUS DATA         |
+|   5. KELUA              |
+===========================
+"""
+)
+
+data_mahasiswa = []
+while True:
+    pilih = int(input("PILIH : "))
+    if pilih == 1:
+        nama = input("NAMA : ")
+        nim = input("NIM : ")
+        kelas = input("KELAS : ")
+        data_mahasiswa.append([nama,nim,kelas])
+    elif pilih == 2:
+        for i in range(len(data_mahasiswa)):
+            print(f"\n Data Mahasiswa ke-{i+1}\nNAMA : {data_mahasiswa[i][0]}\nNIM : {data_mahasiswa[i][1]}\nKELAS : {data_mahasiswa[i][2]}")
+    elif pilih == 3:
+        nama_lama = input("Nama Baru : ")
+        for i in range(len(data_mahasiswa)):
+            if data_mahasiswa[i][0] == nama_lama:
+                nama_baru = input("NAMA : ")
+                nim_baru = input("NIM : ")
+                kelas_baru = input("KELAS : ")
+                data_mahasiswa[i][0] = nama_baru
+                data_mahasiswa[i][1] = nim_baru
+                data_mahasiswa[i][2] = kelas_baru
+    elif pilih == 4:
+        nama_lama = input("Nama yang ingin dihapus")
+        for i in range(len(data_mahasiswa)):
+            if data_mahasiswa[i][0] == nama_lama:
+                del data_mahasiswa[i]
+    elif pilih == 5:
+        print("Terima Kasih Telah Mengakses Data Mahasiswa")
+        break
+    else:
+        print("Anda Salah Input")
